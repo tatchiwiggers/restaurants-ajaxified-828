@@ -1,0 +1,8 @@
+<h1>All Restaurants</h1>
+
+<ul>
+    <% @restaurants.each do |r| %>
+        <li><%= link_to r.name, restaurant_path(r) %></li>
+        <%= link_to 'delete', r, method: :delete, remote: true %>
+    <% end %>
+</ul>
